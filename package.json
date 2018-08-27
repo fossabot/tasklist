@@ -1,0 +1,48 @@
+{
+  "name": "@panthera/tasklist",
+  "version": "0.0.0",
+  "description": "A module for serially executing collections of tasks.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint lib && nyc ava"
+  },
+  "engines": {
+    "node": ">=8.2.1"
+  },
+  "author": "Connor Wiseman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pantherajs/tasklist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pantherajs/tasklist/issues"
+  },
+  "homepage": "https://github.com/pantherajs/tasklist#readme",
+  "dependencies": {
+    "events": "^3.0.0",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "ava": "^1.0.0-beta.7",
+    "eslint": "^5.4.0",
+    "nyc": "^12.0.2",
+    "sinon": "^6.1.5"
+  },
+  "nyc": {
+    "exclude": [
+      "coverage",
+      "node_modules",
+      "test"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  },
+  "ava": {
+    "files": [
+      "test/**/*.spec.js"
+    ]
+  }
+}
